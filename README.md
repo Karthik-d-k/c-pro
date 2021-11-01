@@ -14,5 +14,5 @@ Please read the issue list before posting a PR.
 
 ## License
 
-This repo has a _MIT License_
+This repository is licensed under [MIT](../LICENSE)
 
