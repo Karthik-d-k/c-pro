@@ -4,7 +4,7 @@
 
 # c-pro
 
-This repo contains solutions for the exercises in the book :- __C Programming Language 2nd Edition  by Brian W. Kernighan and Dennis M. Ritchie__
+This repo contains solutions for the exercises in the book --> __C Programming Language 2nd Edition  by Brian W. Kernighan and Dennis M. Ritchie__
 
 
 ## Contributing
