@@ -44,4 +44,4 @@ int main()
 }
 
 
-/* Not a complete code -> yet to be completed */
+/* Code is not complete, yet to be completed */
