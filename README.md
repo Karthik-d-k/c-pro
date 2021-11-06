@@ -9,7 +9,7 @@ This repo contains solutions for the exercises in the book --> __C Programming L
 
 ## Contributing
 
-Please read the issue list before posting a PR.
+Feel free to raise a PR or open an issue, if you find any bugs/improvements in the code.
 
 
 ## License
