@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #define MAXLINE 1000 /* maximum input line length */
-#define VERSION 2    /* change the version number to either 0 or 1 */
+#define VERSION 2    /* change the version number to either 1 or 2 */
 
 int getline_V01(char line1[], int maxline1);
 int getline_V02(char line2[], int maxline2);
