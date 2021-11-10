@@ -61,7 +61,6 @@ unsigned long int char2int(char c)
 	{
 		switch(c)
 		{
-
 			case 'A':
 				i = 10;
 				break;
@@ -82,6 +81,7 @@ unsigned long int char2int(char c)
 				break;
 			default:
 				i = 0;
+				break;
 		}	
 	}
 	
