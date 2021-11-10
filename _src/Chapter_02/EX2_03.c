@@ -24,7 +24,7 @@ int main()
     return 0;
 }
 
-/* getline: read a line (LOWERCASE) into s, return length */
+/* getline: read a line (UPPERCASE) into s, return length */
 int get_hex(char s[],int lim)
 {
     int c, i;
