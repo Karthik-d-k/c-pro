@@ -31,20 +31,20 @@ int main()
 /* bitcount_V01: count 1 bits in x */
 int bitcount_V01(unsigned x)
 {
-	int b;
-	for (b = 0; x != 0; x >>= 1)
-		if (x & 01)
-			b++;
+    int b;
+    for (b = 0; x != 0; x >>= 1)
+        if (x & 01)
+            b++;
 
-	return b;
+    return b;
 }
 
 /* bitcount_V02: count 1 bits in x -> faster version to bitcount_V01 */
 int bitcount_V02(unsigned x)
 {
-	int b;
-	for (b = 0; x != 0; x &= (x- 1))
-		b++;
+    int b;
+    for (b = 0; x != 0; x &= (x- 1))
+        b++;
 
-	return b;
+    return b;
 }
