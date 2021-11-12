@@ -5,30 +5,30 @@
 
 int main()
 {
-	int c;
-	
-	printf("%s\n", "Enter the input string ");
-	while((c = getchar()) != EOF)
-	{
-		switch(c)
-		{
-			case '\t':
-				putchar('\\');
-				putchar('t');
-				break;
-			case '\b':
-				putchar('\\');
-				putchar('b');
-				break;
-			case '\\':
-				putchar('\\');	
-				putchar('\\');	
-				break;
-			default:
-				putchar(c);
-				break;
-		}
-	}
+    int c;
+    
+    printf("%s\n", "Enter the input string ");
+    while((c = getchar()) != EOF)
+    {
+        switch(c)
+        {
+            case '\t':
+                putchar('\\');
+                putchar('t');
+                break;
+            case '\b':
+                putchar('\\');
+                putchar('b');
+                break;
+            case '\\':
+                putchar('\\');  
+                putchar('\\');  
+                break;
+            default:
+                putchar(c);
+                break;
+        }
+    }
 
-	return 0;
+    return 0;
 }

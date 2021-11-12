@@ -4,24 +4,24 @@
 
 int main()
 {
-	int n_blanks = 0;
-	int c;
-	
-	printf("%s\n", "Enter the input string ");
-	while((c = getchar()) != EOF)
-	{
-		if(c != ' ')
-		{
-			if(n_blanks > 1)
-				putchar(' ');
-			putchar(c);
-			n_blanks = 0;
-		}
-		else
-		{
-			++n_blanks;
-		}
-	}
+    int n_blanks = 0;
+    int c;
+    
+    printf("%s\n", "Enter the input string ");
+    while((c = getchar()) != EOF)
+    {
+        if(c != ' ')
+        {
+            if(n_blanks > 1)
+                putchar(' ');
+            putchar(c);
+            n_blanks = 0;
+        }
+        else
+        {
+            ++n_blanks;
+        }
+    }
 
-	return 0;
+    return 0;
 }

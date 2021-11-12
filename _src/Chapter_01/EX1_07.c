@@ -4,7 +4,7 @@
 
 int main()
 {
-	printf("%s %d", "The value of the 'EOF' is =", EOF);
-	
-	return 0;
+    printf("%s %d", "The value of the 'EOF' is =", EOF);
+    
+    return 0;
 }

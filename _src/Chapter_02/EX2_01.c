@@ -10,16 +10,16 @@
 
 int main()
 {
-	/* initialize all the required variables with the maximum values that it can store by filling in 1's for unsigned and signed(sign bit is set to 0) */
+    /* initialize all the required variables with the maximum values that it can store by filling in 1's for unsigned and signed(sign bit is set to 0) */
     unsigned char uc = (unsigned char)(~0);
-	signed char sc = (unsigned char)(~0) >> 1;
-	unsigned short us = (unsigned short)(~0);
-	signed short ss = (unsigned short)(~0) >> 1;
-	unsigned int ui = (unsigned int)(~0);
-	signed int si = (unsigned int)(~0) >> 1;
-	unsigned long ul = (unsigned long)(~0);
-	signed long sl = (unsigned long)(~0) >> 1;
-	
+    signed char sc = (unsigned char)(~0) >> 1;
+    unsigned short us = (unsigned short)(~0);
+    signed short ss = (unsigned short)(~0) >> 1;
+    unsigned int ui = (unsigned int)(~0);
+    signed int si = (unsigned int)(~0) >> 1;
+    unsigned long ul = (unsigned long)(~0);
+    signed long sl = (unsigned long)(~0) >> 1;
+    
     printf("ranges of char, short, int, and long variables, both signed and unsigned (standard headers)\n");
     printf("-------------------------------------------------------------------------------------------\n");
     printf("Range of unsigned char is from          : %22d to %22hhu\n", 0, UCHAR_MAX);
@@ -31,7 +31,7 @@ int main()
     printf("Range of unsigned long int is from      : %22d to %22lu\n", 0, ULONG_MAX);
     printf("Range of signed long int is from        : %22li to %22li\n", LONG_MIN, LONG_MAX);     
     printf("-------------------------------------------------------------------------------------------\n\n");
-	
+    
     printf("ranges of char, short, int, and long variables, both signed and unsigned (direct computation)\n");
     printf("--------------------------------------------------------------------------------------------\n");
     printf("Range of unsigned char is from          : %22d to %22d\n", UNSIG_MIN, uc);
@@ -42,7 +42,7 @@ int main()
     printf("Range of signed int is from             : %22i to %22i\n", -(si + 1), si);
     printf("Range of unsigned long int is from      : %22d to %22lu\n", UNSIG_MIN, ul);
     printf("Range of signed long int is from        : %22li to %22li\n", -(sl + 1), sl);
-    printf("--------------------------------------------------------------------------------------------\n");	
+    printf("--------------------------------------------------------------------------------------------\n");   
 
     return 0;
 }

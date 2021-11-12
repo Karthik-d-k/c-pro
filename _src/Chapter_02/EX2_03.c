@@ -12,14 +12,14 @@ unsigned long int char2int(char c);
 
 int main()
 {
-	int len = 0;
-	unsigned long int integer = 0;
-	char inp[LIMIT + 2];
-	
-	printf("Enter the hexadecimal no (Max allowed no. of bits is %d):\n", LIMIT);
-	len = get_hex(inp, (LIMIT + 2));
-	integer = hex2int(inp, len);
-	printf("\nHexadecimal number (Input): %s\nEquivalent integer number (Output): %lu\n", inp, integer);
+    int len = 0;
+    unsigned long int integer = 0;
+    char inp[LIMIT + 2];
+    
+    printf("Enter the hexadecimal no (Max allowed no. of bits is %d):\n", LIMIT);
+    len = get_hex(inp, (LIMIT + 2));
+    integer = hex2int(inp, len);
+    printf("\nHexadecimal number (Input): %s\nEquivalent integer number (Output): %lu\n", inp, integer);
     
     return 0;
 }
@@ -30,7 +30,7 @@ int get_hex(char s[],int lim)
     int c, i;
     
     for (i = 0; i < lim && (c=getchar()) != EOF && c != '\n'; ++i)
-		s[i] = toupper(c);
+        s[i] = toupper(c);
     s[i] = '\0';
     
     return i;
@@ -39,51 +39,51 @@ int get_hex(char s[],int lim)
 /* hex2int: read array containing heaxadecimal no. and return decimal integer value. */
 unsigned long int hex2int(char s[], int length)
 {
-	int bit_pos;
-	unsigned long int a = 0;
-	bool cond = false;
-	cond = (s[0] == '0' && s[1] == 'X');
-	
-	for (bit_pos = (length-1); (bit_pos >= (cond ? 2 : 0)); --bit_pos)      /* cond is used to exclude 0X prefix if present in the input*/
-		a += (char2int(s[bit_pos])) << (4 * (length -1 - bit_pos));
+    int bit_pos;
+    unsigned long int a = 0;
+    bool cond = false;
+    cond = (s[0] == '0' && s[1] == 'X');
+    
+    for (bit_pos = (length-1); (bit_pos >= (cond ? 2 : 0)); --bit_pos)      /* cond is used to exclude 0X prefix if present in the input*/
+        a += (char2int(s[bit_pos])) << (4 * (length -1 - bit_pos));
 
-	return a;
+    return a;
 }
 
 /* convert given character back to its integer form */
 unsigned long int char2int(char c)
 {
-	unsigned long int i = 0;
-	
-	if (c >= '0' && c <= '9')
-		i = (unsigned long int) (c - '0');
-	else
-	{
-		switch(c)
-		{
-			case 'A':
-				i = 10;
-				break;
-			case 'B':
-				i = 11;
-				break;
-			case 'C':
-				i = 12;
-				break;
-			case 'D':
-				i = 13;
-				break;
-			case 'E':
-				i = 14;
-				break;
-			case 'F':
-				i = 15;
-				break;
-			default:
-				i = 0;
-				break;
-		}	
-	}
-	
-	return i;
+    unsigned long int i = 0;
+    
+    if (c >= '0' && c <= '9')
+        i = (unsigned long int) (c - '0');
+    else
+    {
+        switch(c)
+        {
+            case 'A':
+                i = 10;
+                break;
+            case 'B':
+                i = 11;
+                break;
+            case 'C':
+                i = 12;
+                break;
+            case 'D':
+                i = 13;
+                break;
+            case 'E':
+                i = 14;
+                break;
+            case 'F':
+                i = 15;
+                break;
+            default:
+                i = 0;
+                break;
+        }   
+    }
+    
+    return i;
 }

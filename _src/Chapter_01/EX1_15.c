@@ -10,24 +10,24 @@ int fah_to_cel(int fah);
 
 int main()
 {
-	int i;
-	int temperature;
-	
-	printf("%s\n", "----------------------------------------");
-	printf("Temperature Conversion from F to C\n");
-	printf("%s\n", "----------------------------------------");
-	printf("%3s\t%6s\n", "F", "C");
-	printf("%s\n", "----------------------------------------");
-	
-	for(i = START; i <= END; i = i + STEP)
-	{
-		temperature = fah_to_cel(i);
-		printf("%3d\t%6d\n", i, temperature);
-	}
-	return 0;
+    int i;
+    int temperature;
+    
+    printf("%s\n", "----------------------------------------");
+    printf("Temperature Conversion from F to C\n");
+    printf("%s\n", "----------------------------------------");
+    printf("%3s\t%6s\n", "F", "C");
+    printf("%s\n", "----------------------------------------");
+    
+    for(i = START; i <= END; i = i + STEP)
+    {
+        temperature = fah_to_cel(i);
+        printf("%3d\t%6d\n", i, temperature);
+    }
+    return 0;
 }
 
 int fah_to_cel(int fah)
 {
-	return (5 * (fah - 32) / 9);
+    return (5 * (fah - 32) / 9);
 }

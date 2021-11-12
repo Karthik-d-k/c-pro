@@ -5,7 +5,7 @@ Experiment with leaving out parts of the program, to see what error messages you
 
 int main()
 {
-	printf("hello, world\n");
-	
-	return 0;
+    printf("hello, world\n");
+    
+    return 0;
 }

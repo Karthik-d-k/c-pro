@@ -4,13 +4,13 @@
 
 int main()
 {
-	int c;
-	
-	c = (getchar() != EOF);
-	printf("%s", "The value of the expression 'getchar() != EOF' is = ");
-	printf("%d", c);
-	
-	return 0;
+    int c;
+    
+    c = (getchar() != EOF);
+    printf("%s", "The value of the expression 'getchar() != EOF' is = ");
+    printf("%d", c);
+    
+    return 0;
 }
 /* Exercise 1-7. Write a program to print the value of EOF. */
 
@@ -18,7 +18,7 @@ int main()
 
 int main()
 {
-	printf("%s %d", "The value of the 'EOF' is =", EOF);
-	
-	return 0;
+    printf("%s %d", "The value of the 'EOF' is =", EOF);
+    
+    return 0;
 }

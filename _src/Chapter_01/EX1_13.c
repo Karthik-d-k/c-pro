@@ -5,24 +5,24 @@
 
 int main()
 {
-	int c, len;
-	len = 0;
-	
-	printf("%s\n", "Enter the input : ");
-	
-	while ((c = getchar()) != EOF) 
-	{
-		if (!((c == ' ') || (c == '\n') || (c == '\t')))
-		{
-			++len;
-			printf("*");
-		}
-		else 
-		{
-			len = 0;
-			printf("\n");
-		}
-	}
-	
-	return 0;
+    int c, len;
+    len = 0;
+    
+    printf("%s\n", "Enter the input : ");
+    
+    while ((c = getchar()) != EOF) 
+    {
+        if (!((c == ' ') || (c == '\n') || (c == '\t')))
+        {
+            ++len;
+            printf("*");
+        }
+        else 
+        {
+            len = 0;
+            printf("\n");
+        }
+    }
+    
+    return 0;
 }
