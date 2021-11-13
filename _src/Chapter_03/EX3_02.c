@@ -62,7 +62,7 @@ void escape_reverse(char s[], char t[])
         switch(c)
         {
             case '\\':
-				t[j] = ((s[++i] == 't') ? '\t' : ((s[++i] == 'n') ? '\n' : '\\'));
+                t[j] = ((s[++i] == 't') ? '\t' : ((s[++i] == 'n') ? '\n' : '\\'));
                 break;             
             default:
                 t[j] = s[i];
