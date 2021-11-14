@@ -31,7 +31,7 @@ void expand(char s1[], char s2[])
         switch(c)
         {
             case '-':
-                if ((i - 1) >= 0)
+                if (i > 0)
                     for (k = s1[i-1]; k <= s1[i+1]; k++, j++)
                     {
                         if (s2[j-1] == k)
