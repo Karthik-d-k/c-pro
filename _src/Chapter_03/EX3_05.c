@@ -11,10 +11,10 @@ void itob(int n, char s[], int b);
 int main()
 {     
     int n = 43981;
-	int b = 16;
+    int b = 16;
     char s[LIMIT];
     
-	itob(n, s, b);
+    itob(n, s, b);
     printf("Integer %d converted to a base %d character representation is = %s\n", n, b, s);
     
     return 0;
@@ -39,14 +39,14 @@ void itob(int n, char s[], int b)
     do 
     {                                 /* generate digits in reverse order */
         x = n % b + '0';             /* get next digit */
-		x = (x > 57) ? (x + 7) : x; /* Add 7 to make compatible for base > 10 */
-		s[i++] = x;
+        x = (x > 57) ? (x + 7) : x; /* Add 7 to make compatible for base > 10 */
+        s[i++] = x;
     } while ((n /= b) > 0);        /* delete it */
     if (sign < 0)
-	{
+    {
         s[i++] = '-';
-		s[0]++;                   /* 0th element is Incremented by 1 to compensate for the addition that we did above */
-	}
+        s[0]++;                   /* 0th element is Incremented by 1 to compensate for the addition that we did above */
+    }
     s[i] = '\0';
     reverse(s);
 }
