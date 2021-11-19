@@ -58,19 +58,19 @@ int main()
                 break;
             case 't':
                 printf("Top element in a stack = %g\n", top());
-                break;	
+                break;  
             case 'v':
                 view_stack();
-                break;	
+                break;  
             case 's':
                 swap_top2();
-                break;		
+                break;      
             case 'd':
                 duplicate_top();
-                break;	
+                break;  
             case 'c':
                 clear();
-                break;					
+                break;                  
             default:
                 printf("error: unknown command %s\n", s);
                 break;
@@ -150,9 +150,9 @@ void clear(void)
 /* print stack elements */
 void view_stack(void)
 {
-	int vp = sp;
-	while(--vp >= 0)
-		printf("%g\n", val[vp]);
+    int vp = sp;
+    while(--vp >= 0)
+        printf("%g\n", val[vp]);
 }
 
 #include <ctype.h>
