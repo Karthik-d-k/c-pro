@@ -19,4 +19,4 @@ This repository is licensed under [MIT](../LICENSE)
 
 ## Chapter 1 
 ### Example 1 
-> :::code language="c" source="../_src/Chapter_01/EX1_01.c":::
+:::code language="c" source="../_src/Chapter_01/EX1_01.c":::
