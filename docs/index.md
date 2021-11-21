@@ -19,4 +19,8 @@ This repository is licensed under [MIT](../LICENSE)
 
 ## Chapter 1 
 
-Docs Coming soon !
+Example 1 
+---------
+``` title=".browserslistrc"
+--8<-- "../src/Chapter_01/EX1_01.c"
+```
