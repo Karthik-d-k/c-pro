@@ -18,5 +18,5 @@ This repository is licensed under [MIT](../LICENSE)
 
 
 ## Chapter 1 
-### Example 1 
-:::code language="c" source="https://github.com/Karthik-d-k/c-pro/blob/main/_src/Chapter_01/EX1_01.c":::
+
+Docs Coming soon !
