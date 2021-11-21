@@ -21,6 +21,6 @@ This repository is licensed under [MIT](../LICENSE)
 
 Example 1 
 ---------
-``` title=".browserslistrc"
---8<-- "../src/Chapter_01/EX1_01.c"
+``` title="EX1_01.c"
+--8<-- "EX1_01.c"
 ```
