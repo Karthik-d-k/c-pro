@@ -7,5 +7,5 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       base_path:
-      - _src/
+      - _src/Chapter_01/
       check_paths: True
