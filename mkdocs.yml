@@ -6,5 +6,5 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.snippets:
-      base_path: ['./_src']
+      base_path: ['./../_src']
       check_paths: True
