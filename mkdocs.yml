@@ -2,10 +2,15 @@ site_name: My Docs
 theme:
   name: material
 markdown_extensions:
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      use_pygments: True
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.snippets:
       base_path:
       - _src/Chapter_01/
+      - _src/Chapter_02/
+      - _src/Chapter_03/
+      - _src/Chapter_04/
+      - _src/Chapter_05/
       check_paths: True
