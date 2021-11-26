@@ -4,6 +4,7 @@ theme:
 markdown_extensions:
   - pymdownx.highlight:
       use_pygments: True
+      linenums_style: pymdownx-inline
   - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.snippets:
