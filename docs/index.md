@@ -22,6 +22,6 @@ This repository is licensed under [MIT](../LICENSE)
 Example 1 
 ---------
 
-``` title="EX1_01.c"
+``` c title="EX1_01.c"
 --8<-- "EX1_01.c"
 ```
