@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: c-pro
 theme:
   name: material
 markdown_extensions:
@@ -15,3 +15,17 @@ markdown_extensions:
       - _src/Chapter_04/
       - _src/Chapter_05/
       check_paths: True
+
+# Page tree
+nav:
+  - Home: index.md
+  - Docs:
+    - Chapter 1: 
+      - Example 1: --8<-- "EX1_01.c"
+    - Chapter 2: 
+      - Example 1: --8<-- "EX2_01.c"
+    - Chapter 3: 
+      - Example 1: --8<-- "EX3_01.c"
+    - Chapter 4: 
+      - Example 1: --8<-- "EX4_01.c"  
+      
