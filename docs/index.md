@@ -12,16 +12,6 @@ This repo contains solutions for the exercises in the book --> __C Programming L
 Feel free to raise a PR or open an issue, if you find any bugs/improvements in the code.
 
 
-## License
+## Exercises
 
-This repository is licensed under [MIT](../LICENSE)
-
-
-## Chapter 1 
-
-Example 1 
----------
-
-``` c title="EX1_01.c"
---8<-- "EX1_01.c"
-```
+Navigate to `docs` folder for the solutions. 
