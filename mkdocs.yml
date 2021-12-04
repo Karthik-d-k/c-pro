@@ -21,7 +21,7 @@ nav:
   - Home: index.md
   - Docs:
     - Chapter 1: 
-      - Example 1: --8<-- "EX1_01.c"
+      - Example 1: ``` --8<-- "EX1_01.c" ```
     - Chapter 2: 
       - Example 1: --8<-- "EX2_01.c"
     - Chapter 3: 
