@@ -14,4 +14,4 @@ Feel free to raise a PR or open an issue, if you find any bugs/improvements in t
 
 ## Exercises
 
-Navigate to `docs` folder for the solutions. 
+Navigate to `Docs` folder for the solutions. 
