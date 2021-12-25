@@ -14,6 +14,12 @@ markdown_extensions:
       - _src/Chapter_03/
       - _src/Chapter_04/
       - _src/Chapter_05/
+      - docs/Chapter_01/
+      - docs/Chapter_02/
+      - docs/Chapter_03/
+      - docs/Chapter_04/
+      - docs/Chapter_05/
+      
       check_paths: True
 
 # Page tree
