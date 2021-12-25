@@ -2,44 +2,44 @@
 
 #include <stdio.h>
 
+#define LIMIT 100
+
 int main()
 {
-    int c, i, j, k, l, c1, c2, len;
-    i = j = k = l = 0;
-    len = 1;
-    char chars[500];
-    char unique[500];
-    int lens[500];
-    
+    int c, i, j, k, u, l, found;
+    i = j = k = u = l = found = 0;
+    char chars[LIMIT];
+    char unique[LIMIT];
+    int freqs[LIMIT];
+
     printf("%s\n", "Enter the input : ");
-    
-    while ((c = getchar()) != EOF)
+
+    while ((c = getchar()) != EOF && i < LIMIT)
     {
-        chars[i] = c;
-        ++i;
-    }
-    chars[i] = '\0';
-    
-    unique[0] = chars[0];
-    for (j = 1; j <= i; j++)
-    {
-        for (k = j-1; k == 1; k--)
+        chars[i++] = c;
+
+        for (k = i-1; k >= 0; k--)
         {
-            if (chars[j] != chars[k])
+            if (chars[i] == chars[k])
             {
-                unique[len] = chars[j];
-                ++len;
-                break;
+                freqs[k] += 1;
+                found = 1;
             }
         }
+        if (!found)
+        {
+            unique[u] = chars[i];
+            freqs[u] = 1;
+            found = 0;
+            u++;
+        }
+        unique[u] = '\0';
     }
-    unique[len] = '\0';
-    
-    printf("%s\n", "unique characters in input : ");
-    printf("%d\n",  len);
-    for (l = 0; l < len; l++)
-        putchar(unique[l]);
-    
+    chars[i] = '\0';
+    printf("%s %d\n", "unique characters in input : ", u);
+    for (l = 0; l < u; l++)
+        printf("%d -> %c\n", freqs[l], unique[l]);
+
     return 0;
 }
 
