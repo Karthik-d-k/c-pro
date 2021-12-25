@@ -14,11 +14,6 @@ markdown_extensions:
       - _src/Chapter_03/
       - _src/Chapter_04/
       - _src/Chapter_05/
-      - docs/Chapter_01/
-      - docs/Chapter_02/
-      - docs/Chapter_03/
-      - docs/Chapter_04/
-      - docs/Chapter_05/
       
       check_paths: True
 
@@ -27,13 +22,10 @@ nav:
   - Home: index.md
   - Docs:
     - Chapter 1: 
-      - Example 1: 
-        - EX1_01.md
-     
+      - Example 1: EX1_01.md
     - Chapter 2: 
       - Example 1: --8<-- "EX2_01.c"
     - Chapter 3: 
       - Example 1: --8<-- "EX3_01.c"
     - Chapter 4: 
       - Example 1: --8<-- "EX4_01.c"  
-      
