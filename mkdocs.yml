@@ -1,7 +1,7 @@
 site_name: c-pro
 theme:
   name: material
-repo_url: https://karthik-d-k.github.io/c-pro/
+repo_url: https://github.com/Karthik-d-k/c-pro
 markdown_extensions:
   - pymdownx.highlight:
       use_pygments: True
