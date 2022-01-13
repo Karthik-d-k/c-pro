@@ -1,6 +1,7 @@
 site_name: c-pro
 theme:
   name: material
+repo_url: https://karthik-d-k.github.io/c-pro/
 markdown_extensions:
   - pymdownx.highlight:
       use_pygments: True
@@ -16,6 +17,14 @@ markdown_extensions:
       - _src/Chapter_05/
       
       check_paths: True
+
+# Social links
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Karthik_d_k
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/karthik-d-k-319853166/      
 
 # Page tree
 nav:
