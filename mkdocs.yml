@@ -1,6 +1,17 @@
 site_name: c-pro
 theme:
   name: material
+  palette:
+    primary: teal
+    accent: light green
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - navigation.top
+plugins:
+  - search
+
 repo_url: https://github.com/Karthik-d-k/c-pro
 markdown_extensions:
   - pymdownx.highlight:
