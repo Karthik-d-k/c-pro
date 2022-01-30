@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-path = Path.cwd().parent
+path = Path.cwd()
 
 inputpath = path/'_src'
 outputpath = path/'docs'
