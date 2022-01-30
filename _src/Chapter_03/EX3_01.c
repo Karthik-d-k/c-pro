@@ -91,19 +91,18 @@ double runtime_diff(int x, int v[], int n)
 {
     int average = 10000;
     int i;
-    int found_V01, found_V02;
     double time_spent1 = 0;
     double time_spent2 = 0;
     
     for (i = 0; i < average; i++)
     {
         clock_t begin1 = clock();
-        found_V01 = binsearch_V01(x, v, n);
+        binsearch_V01(x, v, n);
         clock_t end1 = clock();
         time_spent1 += (double)(end1 - begin1) / CLOCKS_PER_SEC;
         
         clock_t begin2 = clock();
-        found_V02 = binsearch_V02(x, v, n);
+        binsearch_V02(x, v, n);
         clock_t end2 = clock();
         time_spent2 += (double)(end2 - begin2) / CLOCKS_PER_SEC;
     }

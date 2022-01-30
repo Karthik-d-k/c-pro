@@ -25,7 +25,7 @@ void expand(char s1[], char s2[])
 {
     int i, j, k, c;
     
-    for (i = 0, j = 0; i < strlen(s1); i++)
+    for (i = 0, j = 0; i < ((int) strlen(s1)); i++)
     {
         c = s1[i];
         switch(c)

@@ -21,7 +21,7 @@ unsigned rightrot(unsigned x, int n)
 	int length = unsignedlength();
 	printf("bit length of x = %d\n", length);
 	
-    return ((x >> n) | (((x) & (~(~0 << n))) << (length - n)));            
+    return ((x >> n) | (((x) & (~(~0U << n))) << (length - n)));            
 }
 
 /* bitlength: count no of bits in x */

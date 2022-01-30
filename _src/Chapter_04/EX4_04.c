@@ -122,7 +122,10 @@ double top(void)
 void duplicate_top(void)
 {
     if (sp > 0)
-        val[sp++] = val[sp - 1];
+    {
+        val[sp] = val[sp - 1];
+        sp++;
+    }
     else 
         printf("error: stack empty\n");
 }

@@ -21,7 +21,7 @@ unsigned setbits(unsigned x, int p, int n, unsigned y)
 {
     unsigned temp = 0;
     
-    temp = x & ~((~(~0 << n)) << (p + 1 - n));
+    temp = x & ~((~(~0U << n)) << (p + 1 - n));
     return ((temp) | (y << (p + 1 - n)));            
 }
 

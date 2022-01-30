@@ -32,7 +32,7 @@ int lineslength(char s[])
         if (c == '\n')
         {
             s[i] = '.';
-            ++i
+            ++i;
         }
         else
             s[i] = c;

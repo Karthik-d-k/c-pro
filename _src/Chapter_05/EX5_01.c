@@ -23,7 +23,7 @@ void ungetch(int);
 /* getint: get next integer from input into *pn */
 int getint(int *pn)
 {
-    int c, d, sign;
+    int c, sign;
     
     while (isspace(c = getch())) /* skip white space */
         ;

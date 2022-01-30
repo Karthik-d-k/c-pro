@@ -29,7 +29,7 @@ void escape(char s[], char t[])
 {
     int i, j, c;
     
-    for (i = 0, j = 0; i < strlen(t); i++, j++)
+    for (i = 0, j = 0; i < ((int) strlen(t)); i++, j++)
     {
         c = t[i];
         switch(c)
@@ -56,7 +56,7 @@ void escape_reverse(char s[], char t[])
 {
     int i, j, c;
     
-    for (i = 0, j = 0; i < strlen(s); i++, j++)
+    for (i = 0, j = 0; i < ((int) strlen(s)); i++, j++)
     {
         c = s[i];
         switch(c)

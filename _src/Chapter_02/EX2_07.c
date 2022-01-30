@@ -20,6 +20,6 @@ unsigned invert(unsigned x, int p, int n)
 {
     unsigned temp = 0;
     
-    temp = ((~(~0 << n)) << (p + 1 - n));
+    temp = ((~(~0U << n)) << (p + 1 - n));
     return ((x) ^ (temp));            
 }
