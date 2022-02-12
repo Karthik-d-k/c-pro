@@ -1,54 +1,62 @@
-import os
 from pathlib import Path
 
 path = Path.cwd()
 
-inputpath = path/'_src'
-outputpath = path/'docs'
+inputdir = path/'_src'
+outputdir = path/'docs'
 
 doc_string = """# problem_statement
 
 ``` c
 
---8<-- "filename.c"
+--8<-- "filename"
 
 ```
 """
 
-c_files = inputpath.rglob('*.c')
+def get_paths(inputdir, pattern):
+    for path in Path(inputdir).rglob(pattern):
+        if path.exists():
+            yield path
 
-def extract_statement(c_file):
-    """
-    Extract problem statement from the given `c_file`.
-    """
-    statement_string = ""
-    with open(c_file, mode='r', encoding='utf8') as f:
-            for lineno, line in enumerate(f, start=1):
-                if ('#include' not in line) and lineno <= 3 :
-                    statement_string += line.strip()
-    # delete comment indicator                 
-    statement_string = statement_string.replace("/*", "", 1)
-    statement_string = statement_string.replace("*/", "", 1)
-    # remove whitespaces
-    statement_string = statement_string.strip()
-    return statement_string
+def get_files(paths, pattern):
+    for path in paths:
+        with path.open(pattern, encoding='utf8') as f:
+            yield f
 
-def c2md(c_files):
-    """
-    Create .md file for the given `c_files` inside docs folder.
-    """
+def get_contents(files):
+    for f in files:
+        yield f.read()
+
+def get_statements(contents):
+    for content in contents:
+        content = ' '.join(content.partition("/*")[2].split())
+        content = ' '.join(content.partition("*/")[0].split())
+        yield content
+
+def create_md_paths(c_files):
     for c_file in c_files:
         dir_name = (c_file).parent
         out_dir_name = Path(str(dir_name).replace('_src', 'docs'))
-        if not os.path.isdir(out_dir_name):
-            os.mkdir(out_dir_name)
+        if not out_dir_name.is_dir():
+            out_dir_name.mkdir()
         md_file = Path(out_dir_name/c_file.name).with_suffix('.md')
-        statement_string = extract_statement(c_file)
-        with open(md_file, mode='w', encoding='utf8') as f:
-            f.truncate(0)
-            string = doc_string.replace('problem_statement', statement_string)
-            code = string.replace('filename', str(md_file.name[:-3]))
-            f.write(code)
+        yield md_file
+
+def write_statements(md_files, statements, doc):
+    for f, statement in zip(md_files, statements):
+        doc_string = doc
+        doc_string = doc_string.replace('problem_statement', statement)
+        filename = f.name.split('/')[-1].replace('.md', '.c')
+        doc_string = doc_string.replace('filename', filename)
+        f.write(doc_string)
 
 if (__name__ == "__main__"):
-    c2md(c_files)
+    paths = get_paths(inputdir, '*.c')
+    files = get_files(paths, 'rt')
+    data = get_contents(files)
+    statements = get_statements(data)
+    c_files = get_paths(inputdir, '*.c')
+    md_paths = create_md_paths(c_files)
+    md_files = get_files(md_paths, 'wt')
+    write_statements(md_files, statements, doc_string)
