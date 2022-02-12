@@ -1,3 +1,8 @@
+## c2md         : create markdown files from *.c files
+.PHONY : c2md
+c2md : 
+	python c2md.py
+
 ## build        : Build the site
 .PHONY : build
 build : 
