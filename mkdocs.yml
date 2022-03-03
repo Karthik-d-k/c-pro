@@ -21,11 +21,11 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.snippets:
       base_path:
-      - _src/Chapter_01/
-      - _src/Chapter_02/
-      - _src/Chapter_03/
-      - _src/Chapter_04/
-      - _src/Chapter_05/
+      - src/Chapter_01/
+      - src/Chapter_02/
+      - src/Chapter_03/
+      - src/Chapter_04/
+      - src/Chapter_05/
       
       check_paths: True
 

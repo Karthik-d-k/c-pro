@@ -2,7 +2,7 @@ from pathlib import Path
 
 path = Path.cwd()
 
-inputdir = path/'_src'
+inputdir = path/'src'
 outputdir = path/'docs'
 
 doc_string = """# problem_statement
@@ -37,7 +37,7 @@ def get_statements(contents):
 def create_md_paths(c_files):
     for c_file in c_files:
         dir_name = (c_file).parent
-        out_dir_name = Path(str(dir_name).replace('_src', 'docs'))
+        out_dir_name = Path(str(dir_name).replace('src', 'docs'))
         if not out_dir_name.is_dir():
             out_dir_name.mkdir()
         md_file = Path(out_dir_name/c_file.name).with_suffix('.md')
