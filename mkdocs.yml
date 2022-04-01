@@ -28,6 +28,9 @@ markdown_extensions:
       
       check_paths: True
 
+extra_css:
+  - stylesheets/extra.css
+
 # Social links
 extra:
   social:
